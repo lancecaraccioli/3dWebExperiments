@@ -4,7 +4,7 @@
 
 
 var myCamera, scene, renderer;
-var geometry, material, mesh;
+var geometry, material, mesh, spotlight;
 var speed = 10;
 (function($){
 
@@ -46,23 +46,29 @@ var speed = 10;
             camera.rotateX(deltaY);
         }
 
-        function updateScene(geometry, material){
-            var myGeometry = new THREE.CubeGeometry( 200, 200, 200 );
-            var myMaterial = new THREE.MeshBasicMaterial( { color: 0xff0000, wireframe: true } );
-            console.log(geometry);
-            console.log(myGeometry);
-            console.log(material);
-            console.log(myMaterial); 
-
-            mesh = new THREE.Mesh( geometry, material );
-            getScene().add(mesh);
+        function updateScene(geometry, materials){
+            var material = new THREE.MeshFaceMaterial( materials );
+            var model = new THREE.Mesh( geometry, material );
+            model.scale.set(1,1,1);
+            getScene().add(model);
         }
 
         function getScene(){
             if (!scene){
                 scene = new THREE.Scene();
+                var ambientLight = new THREE.AmbientLight(0x111111);
+                scene.add(ambientLight);
             }
             return scene;
+        }
+
+        function getSpotlight(){
+            if (!spotlight){
+                spotlight = new THREE.PointLight( 0xFFFFDD );
+                spotlight.position.set( -15, 10, 15 );
+                getScene().add( spotlight );
+            }
+            return spotlight;
         }
 
         function getCamera(){
@@ -82,7 +88,7 @@ var speed = 10;
         }
 
         function getLoader(){
-            var loader = new THREE.JSONLoader();
+            var loader = new THREE.JSONLoader(true);
             return loader;
         }
 
@@ -91,7 +97,10 @@ var speed = 10;
             //rotating box
 
             var loader = getLoader();
-            loader.load( "/js/johnbox.json", updateScene );
+            loader.load({
+                model:"/js/johnbox.json",
+                callback:updateScene
+            });
 
             //renderer
             renderer = getRenderer();
