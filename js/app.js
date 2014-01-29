@@ -1,28 +1,19 @@
+/**
+ * @namespace $.ui
+ */
+
+
 var camera, scene, renderer;
 var geometry, material, mesh;
 var speed = 10;
 (function($){
-    $(document).keydown(function(event){
-        event.preventDefault();
-        if(event.which == $.ui.keyCode.UPPER_W || event.which == $.ui.keyCode.LOWER_W){
-            camera.translateZ(-speed);
-        } else if(event.which == $.ui.keyCode.UPPER_A || event.which == $.ui.keyCode.LOWER_A){
-            camera.translateX(-speed);
-        } else if(event.which == $.ui.keyCode.UPPER_S || event.which == $.ui.keyCode.LOWER_S){
-            camera.translateZ(speed);
-        } else if(event.which == $.ui.keyCode.UPPER_D || event.which == $.ui.keyCode.LOWER_D){
-            camera.translateX(speed);
-        }
-    });
-    $(document).mousemove(function(event){
 
-    });
+
     $(document).ready(function(){
 
         $(document).click(function(){
             initFullScreen();
         });
-
 
         function pointerLockChange(event){
             if (document.pointerLockElement === renderer.domElement ||
@@ -103,6 +94,19 @@ var speed = 10;
             document.addEventListener('webkitpointerlockerror', pointerLockError, false);
 
             renderer.domElement.requestPointerLock();
+
+            $(document).keydown(function(event){
+                event.preventDefault();
+                if(event.which == $.ui.keyCode.UPPER_W || event.which == $.ui.keyCode.LOWER_W){
+                    camera.translateZ(-speed);
+                } else if(event.which == $.ui.keyCode.UPPER_A || event.which == $.ui.keyCode.LOWER_A){
+                    camera.translateX(-speed);
+                } else if(event.which == $.ui.keyCode.UPPER_S || event.which == $.ui.keyCode.LOWER_S){
+                    camera.translateZ(speed);
+                } else if(event.which == $.ui.keyCode.UPPER_D || event.which == $.ui.keyCode.LOWER_D){
+                    camera.translateX(speed);
+                }
+            });
 
         }
 
