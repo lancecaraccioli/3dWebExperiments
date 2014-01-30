@@ -5,7 +5,7 @@
 
 var myCamera, scene, renderer;
 var geometry, material, loader, spotlight;
-var speed = 10;
+var speed = 5;
 var documentInited = false;
 
 (function($){
@@ -76,7 +76,9 @@ var documentInited = false;
         function getCamera(){
             if (!myCamera) {
                 myCamera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
-                myCamera.position.z = 1000;
+                myCamera.position.z = 700;
+                myCamera.position.y = 700;
+                myCamera.position.x = -200;
             }
             return myCamera;
         }
@@ -120,14 +122,16 @@ var documentInited = false;
 
                 $(document).keydown(function(event){
                     event.preventDefault();
+                    var adjustedSpeed = speed*10;
+                    var myCamera = getCamera();
                     if(event.which == $.ui.keyCode.UPPER_W || event.which == $.ui.keyCode.LOWER_W){
-                        myCamera.translateZ(-speed);
+                        myCamera.translateZ(-adjustedSpeed);
                     } else if(event.which == $.ui.keyCode.UPPER_A || event.which == $.ui.keyCode.LOWER_A){
-                        myCamera.translateX(-speed);
+                        myCamera.translateX(-adjustedSpeed);
                     } else if(event.which == $.ui.keyCode.UPPER_S || event.which == $.ui.keyCode.LOWER_S){
-                        myCamera.translateZ(speed);
+                        myCamera.translateZ(adjustedSpeed);
                     } else if(event.which == $.ui.keyCode.UPPER_D || event.which == $.ui.keyCode.LOWER_D){
-                        myCamera.translateX(speed);
+                        myCamera.translateX(adjustedSpeed);
                     }
                 });
 
