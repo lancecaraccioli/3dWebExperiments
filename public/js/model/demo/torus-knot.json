@@ -1,0 +1,153 @@
+{
+	"metadata": {
+		"version": 4.3,
+		"type": "Object",
+		"generator": "ObjectExporter"
+	},
+	"geometries": [
+		{
+			"uuid": "3DCBA48A-3602-45B0-BBD6-0E1E53A1DDFE",
+			"type": "CubeGeometry",
+			"width": 100,
+			"height": 100,
+			"depth": 100,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		},
+		{
+			"uuid": "025B0260-F728-4DFD-B55E-B6A151D21ED2",
+			"type": "TorusKnotGeometry",
+			"radius": 100,
+			"tube": 40,
+			"radialSegments": 64,
+			"tubularSegments": 8,
+			"p": 2,
+			"q": 3,
+			"heightScale": 1
+		},
+		{
+			"uuid": "C4C09EAE-AA3C-44B0-9258-4A4E407880A1",
+			"type": "CubeGeometry",
+			"width": 100,
+			"height": 100,
+			"depth": 100,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		},
+		{
+			"uuid": "011AEDAC-727C-4C12-9F82-A9D430559CBE",
+			"type": "CylinderGeometry",
+			"radiusTop": 20,
+			"radiusBottom": 20,
+			"height": 100,
+			"radialSegments": 8,
+			"heightSegments": 1,
+			"openEnded": false
+		}],
+	"materials": [
+		{
+			"uuid": "267117E0-0180-4A48-9E00-3F2D06B80F84",
+			"type": "MeshPhongMaterial",
+			"color": 16777215,
+			"ambient": 16777215,
+			"emissive": 0,
+			"specular": 1118481,
+			"shininess": 30,
+			"opacity": 1,
+			"transparent": false,
+			"wireframe": false
+		},
+		{
+			"uuid": "0A15E0CB-F828-4AD5-9080-1EA23E906109",
+			"type": "MeshPhongMaterial",
+			"color": 16777215,
+			"ambient": 16777215,
+			"emissive": 0,
+			"specular": 1118481,
+			"shininess": 30,
+			"opacity": 1,
+			"transparent": false,
+			"wireframe": false
+		},
+		{
+			"uuid": "E2CC7E23-FE61-43A4-9065-8CEFE9584AEF",
+			"type": "MeshPhongMaterial",
+			"color": 16777215,
+			"ambient": 16777215,
+			"emissive": 0,
+			"specular": 1118481,
+			"shininess": 30,
+			"opacity": 1,
+			"transparent": false,
+			"wireframe": false
+		},
+		{
+			"uuid": "89A02865-B6FB-4477-9966-9A610018EE09",
+			"type": "MeshPhongMaterial",
+			"color": 16777215,
+			"ambient": 16777215,
+			"emissive": 0,
+			"specular": 1118481,
+			"shininess": 30,
+			"opacity": 1,
+			"transparent": false,
+			"wireframe": false
+		}],
+	"object": {
+		"uuid": "C833F0FA-D84B-48B7-9608-0057029D6D90",
+		"type": "Scene",
+		"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+		"children": [
+			{
+				"uuid": "BE8FFDF7-C124-4CD0-8A2C-9017AA616D63",
+				"name": "Cube 1",
+				"type": "Mesh",
+				"geometry": "3DCBA48A-3602-45B0-BBD6-0E1E53A1DDFE",
+				"material": "267117E0-0180-4A48-9E00-3F2D06B80F84",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-175.76699829101562,64.55543518066406,138.1944122314453,1]
+			},
+			{
+				"uuid": "FFE75EC8-8B99-4A6F-A903-BBF93280ECBE",
+				"name": "TorusKnot 1",
+				"type": "Mesh",
+				"geometry": "025B0260-F728-4DFD-B55E-B6A151D21ED2",
+				"material": "0A15E0CB-F828-4AD5-9080-1EA23E906109",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-118.09111022949219,188.8111114501953,-5.809983253479004,1]
+			},
+			{
+				"uuid": "1345C485-B588-45D3-B58C-20D09023637B",
+				"name": "SpotLight 4",
+				"type": "SpotLight",
+				"color": 16777215,
+				"intensity": 1,
+				"distance": 0,
+				"angle": 0.574,
+				"exponent": 10,
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,811.1263427734375,732.3780517578125,386.17999267578125,1]
+			},
+			{
+				"uuid": "C12A285D-D264-4A9B-A465-370318F68B22",
+				"name": "SpotLight 4 Target",
+				"type": "Object3D",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-46.22249221801758,-295.6811828613281,11.974605560302734,1]
+			},
+			{
+				"uuid": "2C621B17-4F79-42F4-9374-85D737075674",
+				"name": "Cube 2",
+				"type": "Mesh",
+				"geometry": "C4C09EAE-AA3C-44B0-9258-4A4E407880A1",
+				"material": "E2CC7E23-FE61-43A4-9065-8CEFE9584AEF",
+				"matrix": [9.199251174926758,0,0,0,0,1,0,0,0,0,11.782443046569824,0,-0.04173123836517334,-39.652278900146484,0,1]
+			},
+			{
+				"uuid": "21695EDC-F745-4FAF-9A39-42A90CAB41FB",
+				"name": "Cylinder 3",
+				"type": "Mesh",
+				"geometry": "011AEDAC-727C-4C12-9F82-A9D430559CBE",
+				"material": "89A02865-B6FB-4477-9966-9A610018EE09",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-54.3187255859375,39.705326080322266,-60.71726989746094,1]
+			}]
+	}
+}
