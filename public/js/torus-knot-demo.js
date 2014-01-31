@@ -148,13 +148,14 @@ var playerCamera, scene, renderer, geometry, material, loader, jsonObjectLoader,
             setScene(loadedScene);
 
             loadedScene.add( getPlayerControls().getObject() );
+            console.log(loadedScene.getObjectByName('Naked Cube'));
 
             getDocument().body.appendChild(getRenderer().domElement);
 
 
             getJSONObjectLoader().load("/js/model/demo/mydroid-cube.json", function(loadedObject) {
                 getScene().add(loadedObject);
-                onInitialize();
+            onInitialize();
             }, '/img/textures');
 
 

@@ -54,7 +54,7 @@
             "specular": 1118481,
             "shininess": 30,
             "opacity": 0.5,
-            "transparent": false,
+            "transparent" : false,
             "wireframe": false
         },
         {
@@ -100,7 +100,7 @@
         "children": [
             {
                 "uuid": "BE8FFDF7-C124-4CD0-8A2C-9017AA616D63",
-                "name": "Cube 1",
+                "name": "Naked Cube",
                 "type": "Mesh",
                 "geometry": "3DCBA48A-3602-45B0-BBD6-0E1E53A1DDFE",
                 "material": "267117E0-0180-4A48-9E00-3F2D06B80F84",
@@ -108,7 +108,7 @@
             },
             {
                 "uuid": "FFE75EC8-8B99-4A6F-A903-BBF93280ECBE",
-                "name": "TorusKnot 1",
+                "name": "TorusKnot",
                 "type": "Mesh",
                 "geometry": "025B0260-F728-4DFD-B55E-B6A151D21ED2",
                 "material": "0A15E0CB-F828-4AD5-9080-1EA23E906109",
@@ -116,7 +116,7 @@
             },
             {
                 "uuid": "1345C485-B588-45D3-B58C-20D09023637B",
-                "name": "SpotLight 4",
+                "name": "SpotLight",
                 "type": "SpotLight",
                 "color": 16777215,
                 "intensity": 1,
@@ -127,13 +127,13 @@
             },
             {
                 "uuid": "C12A285D-D264-4A9B-A465-370318F68B22",
-                "name": "SpotLight 4 Target",
+                "name": "SpotLight Target",
                 "type": "Object3D",
                 "matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-46.22249221801758,-295.6811828613281,11.974605560302734,1]
             },
             {
                 "uuid": "21695EDC-F745-4FAF-9A39-42A90CAB41FB",
-                "name": "Cylinder 3",
+                "name": "Torus Leg",
                 "type": "Mesh",
                 "geometry": "011AEDAC-727C-4C12-9F82-A9D430559CBE",
                 "material": "89A02865-B6FB-4477-9966-9A610018EE09",
@@ -141,7 +141,7 @@
             },
             {
                 "uuid": "5A56BE3E-C8FC-49DB-8A4C-484F353F4105",
-                "name": "Plane 1",
+                "name": "Landscape",
                 "type": "Mesh",
                 "geometry": "2399C4AE-E7D5-4EE4-B170-3CE22A67E1EB",
                 "material": "43CAC4FB-C53B-495A-8D7D-6E5DB6D2B4EF",
