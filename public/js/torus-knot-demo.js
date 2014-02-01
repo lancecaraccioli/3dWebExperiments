@@ -73,9 +73,9 @@ var playerCamera, scene, renderer, geometry, material, loader, jsonObjectLoader,
      * @link https://github.com/mrdoob/three.js/issues/4068
      * @returns {*}
      */
-    function getThreeJSEditorSceneExportObjectLoader() {
+    function getBlenderSceneLoader() {
         if (!threeJSEditorSceneExportObjectLoader) {
-            threeJSEditorSceneExportObjectLoader = new THREE.ObjectLoader();
+            threeJSEditorSceneExportObjectLoader = new THREE.JSONLoader();
         }
 
         return threeJSEditorSceneExportObjectLoader;
@@ -143,20 +143,20 @@ var playerCamera, scene, renderer, geometry, material, loader, jsonObjectLoader,
         });
 
 
-        getThreeJSEditorSceneExportObjectLoader().load("/js/model/demo/torus-knot.json", function (loadedScene) {
+        getBlenderSceneLoader().load("/js/model/demo/glass-cube.js", function (loadedScene) {
 
             setScene(loadedScene);
 
             loadedScene.add( getPlayerControls().getObject() );
-            console.log(loadedScene.getObjectByName('Naked Cube'));
+            //console.log(loadedScene.getObjectByName('Naked Cube'));
 
             getDocument().body.appendChild(getRenderer().domElement);
 
 
-            getJSONObjectLoader().load("/js/model/demo/mydroid-cube.json", function(loadedObject) {
+            /*getJSONObjectLoader().load("/js/model/demo/mydroid-cube.json", function(loadedObject) {
                 getScene().add(loadedObject);
             onInitialize();
-            }, '/img/textures');
+            }, '/img/textures');*/
 
 
         });
